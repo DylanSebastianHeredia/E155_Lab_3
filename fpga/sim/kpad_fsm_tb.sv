@@ -31,12 +31,9 @@ module kpad_fsm_tb();
 		reset = 1; #10;
 		reset = 0; #10;
 		reset = 1; #10;
-		reset = 0; #10;
-		reset = 1; #10;
-		reset = 0; #10;
-		reset = 1; #10;
 		#60;
-		// col = 4'b0001; #10; 
+
+		col = 4'b0001; #10; 
 		col = 4'b0000; #35;		// Not on rising clk edge
 		col = 4'b0001; #10;
 		col = 4'b0000; #40;		
@@ -51,6 +48,3 @@ module kpad_fsm_tb();
 
 	
 endmodule
-
-
-
