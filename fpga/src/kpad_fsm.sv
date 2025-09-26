@@ -42,6 +42,18 @@ module kpad_fsm (
 	// assign press = $onehot(col);	// Check if (press == 1) col goes HIGH (1) when pressed, so 0001
 	assign press = col[0] ^ col[1] ^ col[2] ^ col[3];
 	
+	logic [3:0] first_col;
+	
+	always_ff @(posedge clk) begin
+		if(reset == 0) begin
+			first_col <= 4'b0000;
+		end
+		
+		else if (enable) begin
+			first_col <= col;
+		end
+	end
+	
 	// LED debugging
 	// assign led [3:0] = row;
 	// assign led [4] = press;
@@ -150,17 +162,5 @@ module kpad_fsm (
 	assign row_pressed = row;
 	
 	assign enable = (state == e0) | (state == e1) | (state == e2) | (state == e3);	// If we are in any of the enable states, enable is activated (1)
-	
-	logic [3:0] first_col;
-	
-	always_ff @(posedge clk) begin
-		if(reset == 0) begin
-			first_col <= 0;
-		end
-		
-		else if (enable) begin
-			first_col <= col;
-		end
-	end
 	
 endmodule
