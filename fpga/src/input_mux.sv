@@ -2,7 +2,7 @@
 // dheredia@g.hmc.edu
 // September 16, 2025
 
-// WORKS
+// input_mux.sv contains code to multiplex the two halves of the 7-segment display. 
 
 module input_mux (
 	input logic 	   clk, 
@@ -15,11 +15,11 @@ module input_mux (
 	);
 	
 	// Internal logic counter
-	logic [17:0] counter;
+	logic [17:0] counter;			
 	
 	assign notselect = ~select;
 	
-	always_ff @ (posedge clk) begin	// Removed: ", negedge reset" since bad for asynch 
+	always_ff @ (posedge clk) begin
 		if (reset == 0) begin
 			select <= 1;
 			s <= s1;
