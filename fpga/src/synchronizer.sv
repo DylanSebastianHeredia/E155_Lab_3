@@ -2,8 +2,8 @@
 // dheredia@g.hmc.edu
 // September 16, 2025
 
-// 
-
+// sychronizer.sv contains code to generate a synchronizer that aligns asynchronous signals with 
+// the project clock.
 
 module synchronizer (
 	input logic		      clk,
@@ -26,4 +26,3 @@ module synchronizer (
 		end
 	end
 endmodule
-
