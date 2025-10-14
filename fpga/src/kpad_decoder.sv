@@ -2,7 +2,8 @@
 // dheredia@g.hmc.edu
 // September 16, 2025
 
-// WORKS
+// kpad_decoder.sv contains combinational logic to decode row and column combinations on the keypad
+// into codes that represent the particular 7-segment number.
 
 module kpad_decoder (
 	input logic 		  clk,
@@ -60,4 +61,3 @@ endmodule
 
 
 			
-
