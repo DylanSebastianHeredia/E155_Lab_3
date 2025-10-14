@@ -1,7 +1,10 @@
 // Sebastian Heredia
 // dheredia@g.hmc.edu
 // September 16, 2025
-// 
+
+// lab3_dsh.sv contains code to instantiate the modules required to register asynchronous keypad button presses
+// and output the correct hexadecimal number on a dual 7-segment display. 
+
 module lab3_dsh ( 
 	input logic			  	  reset,
 	input logic 		[3:0] col, 
@@ -43,4 +46,3 @@ module lab3_dsh (
 	sevensegment sevenseg (s, seg);
 	
 endmodule 
-
