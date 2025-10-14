@@ -2,7 +2,7 @@
 // dheredia@g.hmc.edu
 // September 16, 2025
 
-// 
+// toggle.sv contains code to divide the 48MHz HSOSC system clock to 240Hz.
 
 module toggle (
 	input logic 	reset, 
