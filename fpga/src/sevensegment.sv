@@ -1,9 +1,8 @@
 // E155: Lab 3 - Keypad Scanner
 // Sebastian Heredia, dheredia@g.hmc.edu
 // September 6, 2025
-// sevensegment.sv contains combinational logic to display hex numbers 0-f on the a 7-segment display.
 
-// WORKS
+// sevensegment.sv contains combinational logic to display hex numbers 0-f on the a 7-segment display.
 
 module sevensegment (	input logic		[3:0] s,
 						output logic	[6:0] seg);
@@ -30,4 +29,3 @@ module sevensegment (	input logic		[3:0] s,
 		endcase
 	end
 endmodule
-
