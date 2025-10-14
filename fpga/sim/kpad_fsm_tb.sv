@@ -1,6 +1,10 @@
-// fsm testbench
+// Sebastian Heredia
 // dheredia@g.hmc.edu
+// October 13, 2025
 
+// kpad_fsm_tb contains the automatic testbench code for keypad_fsm, ensuring proper simulation of the keypad functions.
+
+// `timescale 1ns/1ps
 
 module kpad_fsm_tb();
 	
@@ -45,6 +49,5 @@ module kpad_fsm_tb();
 		col = 4'b1000; #65;		// Sending repeat signal
 		col = 4'b0000;
 	end
-
 	
 endmodule
