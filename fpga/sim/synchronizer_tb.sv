@@ -1,7 +1,8 @@
 // Sebastian Heredia
 // dheredia@g.hmc.edu
 // October 14, 2025
-// synchronizer_tb.sv contains code to verify synchronizer module function. 
+
+// synchronizer_tb contains code to verify synchronizer module function. 
 
 `timescale 1ns/1ps
 
